@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرکت حسابداری و مالیاتی آئین ارقام تیام | پیشرو در خدمات مالی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Yekan+Bakh:wght@300;400;500;700;900&display=swap');
+        
+        :root {
+            --primary: #6d28d9;
+            --primary-dark: #5b21b6;
+            --secondary: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Yekan Bakh', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+        
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .floating-btn {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .rtl {
+            direction: rtl;
+        }
+        
+        .text-justify {
+            text-align: justify;
+        }
+        
+        .wave-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        
+        .wave-shape svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+        
+        .wave-shape .shape-fill {
+            fill: var(--light);
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 10px rgba(109, 40, 217, 0.5);
+        }
+        
+        .glow-box {
+            box-shadow: 0 0 20px rgba(109, 40, 217, 0.3);
+        }
+        
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float-up linear infinite;
+        }
+        
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) scale(1);
+                opacity: 0;
+            }
+        }
+        
+        .hexagon {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body class="rtl">
+    <!-- Navigation -->
+    <nav class="glass-effect fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center">
+                            <div class="hexagon bg-white w-10 h-10 flex items-center justify-center glow-box">
+                                <i class="fas fa-calculator text-purple-600 text-xl"></i>
+                            </div>
+                            <span class="text-xl font-black text-purple-800 mr-2">آئین ارقام تیام</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4 space-x-reverse">
+                        <a href="#home" class="text-purple-800 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-bold transition">خانه</a>
+                        <a href="#services" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition">خدمات</a>
+                        <a href="#about" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition">درباره ما</a>
+                        <a href="#training" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition">دوره‌ها</a>
+                        <a href="#contact" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition">تماس</a>
+                        <a href="#contact" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-bold text-sm transition">شروع همکاری</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 focus:outline-none">
+                        <svg class="h-6 w-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu hidden md:hidden bg-white shadow-xl">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">خانه</a>
+                <a href="#services" class="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">خدمات</a>
+                <a href="#about" class="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">درباره ما</a>
+                <a href="#training" class="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">دوره‌های آموزشی</a>
+                <a href="#contact" class="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium">تماس با ما</a>
+                <a href="#contact" class="bg-purple-600 hover:bg-purple-700 text-white block px-3 py-2 rounded-md text-base font-medium text-center">شروع همکاری</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white pt-32 pb-20 relative overflow-hidden">
+        <div class="particles" id="particles-js"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-black mb-6 leading-tight glow-text">
+                        <span class="block">حسابداری هوشمند،</span>
+                        <span class="block">موفقیت مالی تضمینی</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-justify leading-relaxed">با بیش از سه دهه تجربه در زمینه حسابداری و مالیات، خدمات تخصصی با کیفیت بالا ارائه می‌دهیم. ما همراه شما در مسیر موفقیت مالی هستیم.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-white text-purple-800 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-center transition duration-300 transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-phone-alt ml-2"></i> درخواست مشاوره
+                        </a>
+                        <a href="#services" class="bg-transparent border-2 border-white hover:bg-white hover:text-purple-800 px-8 py-4 rounded-lg font-bold text-center transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-list-ul ml-2"></i> خدمات ما
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="relative">
+                        <div class="absolute -top-10 -right-10 w-64 h-64 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+                        <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+                        <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="حسابداری و مالیات" class="rounded-2xl shadow-2xl floating-btn relative z-10 border-4 border-white">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wave-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="scroll-down hidden md:block">
+            <a href="#services" class="text-white text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-bold mb-4">خدمات ما</span>
+                <h2 class="text-3xl font-black text-purple-800 mb-4">خدمات تخصصی ما</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-justify">شرکت آئین ارقام تیام با تیمی مجرب و متخصص، خدمات حسابداری و مالیاتی جامعی را به مشتریان خود ارائه می‌دهد.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="hexagon bg-purple-100 w-16 h-16 flex items-center justify-center mr-4">
+                                <i class="fas fa-file-invoice-dollar text-purple-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">حسابداری و مالیاتی</h3>
+                        </div>
+                        <p class="text-gray-600 text-justify mb-4">انجام کلیه امور حسابداری و مالیاتی، تنظیم دفاتر قانونی و گزارش‌های مالی دقیق با رعایت تمام استانداردها</p>
+                        <a href="#" class="text-purple-600 font-medium inline-flex items-center">
+                            بیشتر بدانید
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="hexagon bg-purple-100 w-16 h-16 flex items-center justify-center mr-4">
+                                <i class="fas fa-handshake text-purple-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">مشاوره مالیاتی</h3>
+                        </div>
+                        <p class="text-gray-600 text-justify mb-4">مشاوره مالیاتی حرفه‌ای، پیگیری پرونده‌های مالیاتی و ارائه راهکارهای کاهش هزینه‌های مالیاتی</p>
+                        <a href="#" class="text-purple-600 font-medium inline-flex items-center">
+                            بیشتر بدانید
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="hexagon bg-purple-100 w-16 h-16 flex items-center justify-center mr-4">
+                                <i class="fas fa-building text-purple-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">ثبت شرکت</h3>
+                        </div>
+                        <p class="text-gray-600 text-justify mb-4">خدمات ثبت شرکت و اخذ و تمدید کارت بازرگانی با بهترین کیفیت و در کوتاه‌ترین زمان</p>
+                        <a href="#" class="text-purple-600 font-medium inline-flex items-center">
+                            بیشتر بدانید
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="hexagon bg-purple-100 w-16 h-16 flex items-center justify-center mr-4">
+                                <i class="fas fa-certificate text-purple-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">صدور مدارک معتبر</h3>
+                        </div>
+                        <p class="text-gray-600 text-justify mb-4">صدور گواهینامه فنی و حرفه‌ای برای افزایش قابلیت‌های شغلی و ارتقاء مهارت‌های حرفه‌ای</p>
+                        <a href="#" class="text-purple-600 font-medium inline-flex items-center">
+                            بیشتر بدانید
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="hexagon bg-purple-100 w-16 h-16 flex items-center justify-center mr-4">
+                                <i class="fas fa-chalkboard-teacher text-purple-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">دوره‌های آموزشی</h3>
+                        </div>
+                        <p class="text-gray-600 text-justify mb-4">آموزش تخصصی در زمینه حسابداری و مالی با اساتید مجرب به صورت حضوری و آنلاین</p>
+                        <a href="#" class="text-purple-600 font-medium inline-flex items-center">
+                            بیشتر بدانید
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden service-card">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="hexagon bg-purple-100 w-16 h-16 flex items-center justify-center mr-4">
+                                <i class="fas fa-industry text-purple-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">مشاوره صنایع و معادن</h3>
+                        </div>
+                        <p class="text-gray-600 text-justify mb-4">مشاوره تخصصی در صنایع و معادن، ارائه راهکارهای مالی جهت بهبود کارایی و سودآوری</p>
+                        <a href="#" class="text-purple-600 font-medium inline-flex items-center">
+                            بیشتر بدانید
+                            <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white relative">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-purple-50 transform skew-x-12 -mr-40"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="درباره شرکت آئین ارقام تیام" class="rounded-2xl shadow-xl relative z-10">
+                        <div class="absolute -bottom-6 -left-6 w-full h-full border-4 border-yellow-400 rounded-2xl z-0"></div>
+                    </div>
+                    <div class="mt-10 bg-purple-600 text-white p-6 rounded-2xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-white text-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-award text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">۳۰+ سال تجربه موفق</h3>
+                        </div>
+                        <p class="text-purple-100 text-justify">با بیش از سه دهه فعالیت حرفه‌ای در زمینه حسابداری و مالیات، به یکی از معتبرترین شرکت‌های مالی در جنوب کشور تبدیل شده‌ایم.</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <span class="inline-block px-4 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-bold mb-4">درباره ما</span>
+                    <h2 class="text-3xl font-black text-purple-800 mb-6">شرکت آئین ارقام تیام</h2>
+                    <div class="w-20 h-1 bg-purple-600 mb-6"></div>
+                    <p class="text-gray-600 mb-6 text-justify leading-relaxed">شرکت حسابداری و مالیاتی آئین ارقام تیام با بیش از سه دهه تجربه در زمینه حسابداری و مالیات، خدمات تخصصی با کیفیت بالا ارائه می‌دهد. این شرکت با مدیریت آقا و خانم پرموزه و با سابقه‌ای درخشان در عرصه حسابداری و مالیات، به یکی از شرکت‌های پیشرو در جنوب کشور تبدیل شده است.</p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 flex items-center">
+                            <i class="fas fa-bullseye text-purple-600 ml-2"></i>
+                            ماموریت ما
+                        </h3>
+                        <p class="text-gray-600 text-justify bg-gray-50 p-4 rounded-lg border-r-4 border-purple-600">تسهیل موفقیت مالی مشتریان با خدمات تخصصی و آموزشی با کیفیت، همراه با پشتیبانی مستمر و ارتقاء دانش حرفه‌ای</p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 flex items-center">
+                            <i class="fas fa-eye text-purple-600 ml-2"></i>
+                            چشم‌انداز
+                        </h3>
+                        <p class="text-gray-600 text-justify bg-gray-50 p-4 rounded-lg border-r-4 border-purple-600">تبدیل شدن به پیشروترین شرکت مالی در جنوب کشور با تمرکز بر نوآوری، تخصص و رضایت مشتری</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 flex items-center">
+                            <i class="fas fa-gem text-purple-600 ml-2"></i>
+                            ارزش‌های ما
+                        </h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-purple-600">
+                                <div class="flex items-center mb-2">
+                                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-2">
+                                        <i class="fas fa-check text-purple-600"></i>
+                                    </div>
+                                    <h4 class="font-bold">اعتماد</h4>
+                                </div>
+                                <p class="text-gray-600 text-sm">شالوده تمام روابط ما با مشتریان</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-purple-600">
+                                <div class="flex items-center mb-2">
+                                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-2">
+                                        <i class="fas fa-check text-purple-600"></i>
+                                    </div>
+                                    <h4 class="font-bold">تخصص</h4>
+                                </div>
+                                <p class="text-gray-600 text-sm">دانش و مهارت تیم حرفه‌ای ما</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-purple-600">
+                                <div class="flex items-center mb-2">
+                                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-2">
+                                        <i class="fas fa-check text-purple-600"></i>
+                                    </div>
+                                    <h4 class="font-bold">پشتیبانی</h4>
+                                </div>
+                                <p class="text-gray-600 text-sm">همراهی مستمر با مشتریان</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg border-r-4 border-purple-600">
+                                <div class="flex items-center mb-2">
+                                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-2">
+                                        <i class="fas fa-check text-purple-600"></i>
+                                    </div>
+                                    <h4 class="font-bold">ارتقاء دانش</h4>
+                                </div>
+                                <p class="text-gray-600 text-sm">به‌روزرسانی مستمر دانش فنی</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Section -->
+    <section id="training" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-bold mb-4">آموزش حرفه‌ای</span>
+                <h2 class="text-3xl font-black text-purple-800 mb-4">دوره‌های آموزشی تخصصی</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-justify">شرکت آئین ارقام تیام با بهره‌گیری از اساتید مجرب، دوره‌های آموزشی تخصصی در زمینه حسابداری و مالیات برگزار می‌کند.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="حسابداری مقدماتی تا پیشرفته" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="inline-block px-3 py-1 bg-purple-600 text-white rounded-full text-xs font-bold">پرطرفدار</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-semibold">حسابداری</span>
+                                <h3 class="text-xl font-bold text-gray-800 mt-2">حسابداری مقدماتی تا پیشرفته</h3>
+                            </div>
+                            <div class="bg-purple-100 p-3 rounded-full">
+                                <i class="fas fa-calculator text-purple-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-justify">آموزش جامع اصول حسابداری از سطح مقدماتی تا پیشرفته با تمرکز بر کاربردهای عملی در محیط کار</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-purple-600 font-medium"><i class="far fa-clock mr-2"></i>60 ساعت</span>
+                            <span class="text-gray-500"><i class="fas fa-user-graduate mr-2"></i>حضوری/آنلاین</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+                            <div class="bg-purple-600 h-2 rounded-full" style="width: 90%"></div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">ظرفیت باقیمانده: 12 نفر</span>
+                            <span class="text-gray-800 font-bold">1,200,000 تومان</span>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <a href="#" class="block w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-bold text-center transition duration-300 transform hover:scale-105">
+                            ثبت نام دوره
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="مالیات بر ارزش افزوده" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-semibold">مالیاتی</span>
+                                <h3 class="text-xl font-bold text-gray-800 mt-2">مالیات بر ارزش افزوده</h3>
+                            </div>
+                            <div class="bg-purple-100 p-3 rounded-full">
+                                <i class="fas fa-file-invoice text-purple-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-justify">آموزش کامل مالیات بر ارزش افزوده، نحوه تنظیم اظهارنامه و راهکارهای کاهش مالیات با رعایت قوانین</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-purple-600 font-medium"><i class="far fa-clock mr-2"></i>40 ساعت</span>
+                            <span class="text-gray-500"><i class="fas fa-user-graduate mr-2"></i>حضوری/آنلاین</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+                            <div class="bg-purple-600 h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">ظرفیت باقیمانده: 8 نفر</span>
+                            <span class="text-gray-800 font-bold">950,000 تومان</span>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <a href="#" class="block w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-bold text-center transition duration-300 transform hover:scale-105">
+                            ثبت نام دوره
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="نرم‌افزارهای حسابداری" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="inline-block px-3 py-1 bg-yellow-400 text-gray-800 rounded-full text-xs font-bold">جدید</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-semibold">حرفه‌ای</span>
+                                <h3 class="text-xl font-bold text-gray-800 mt-2">نرم‌افزارهای حسابداری</h3>
+                            </div>
+                            <div class="bg-purple-100 p-3 rounded-full">
+                                <i class="fas fa-laptop-code text-purple-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-justify">آموزش تخصصی نرم‌افزارهای حسابداری محبوب بازار کار با تمرکز بر حل مسائل واقعی کسب‌وکارها</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-purple-600 font-medium"><i class="far fa-clock mr-2"></i>50 ساعت</span>
+                            <span class="text-gray-500"><i class="fas fa-user-graduate mr-2"></i>حضوری/آنلاین</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+                            <div class="bg-purple-600 h-2 rounded-full" style="width: 60%"></div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">ظرفیت باقیمانده: 5 نفر</span>
+                            <span class="text-gray-800 font-bold">1,500,000 تومان</span>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <a href="#" class="block w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-bold text-center transition duration-300 transform hover:scale-105">
+                            ثبت نام دوره
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-bold transition duration-300 transform hover:scale-105 shadow-lg">
+                    مشاهده همه دوره‌ها
+                    <i class="fas fa-arrow-left mr-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-purple-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-400"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl font-bold mb-2 flex items-center justify-center">
+                        <span class="counter" data-target="30">0</span>+
+                    </div>
+                    <div class="text-purple-200 font-medium">سال تجربه</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold mb-2 flex items-center justify-center">
+                        <span class="counter" data-target="500">0</span>+
+                    </div>
+                    <div class="text-purple-200 font-medium">مشتری راضی</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold mb-2 flex items-center justify-center">
+                        <span class="counter" data-target="1000">0</span>+
+                    </div>
+                    <div class="text-purple-200 font-medium">پرونده مالیاتی</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold mb-2 flex items-center justify-center">
+                        <span class="counter" data-target="20">0</span>+
+                    </div>
+                    <div class="text-purple-200 font-medium">دوره آموزشی</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-bold mb-4">نظرات مشتریان</span>
+                <h2 class="text-3xl font-black text-purple-800 mb-4">مشتریان ما چه می‌گویند؟</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-justify">رضایت مشتریان اولویت اصلی ماست. در ادامه نظرات برخی از همکاران و مشتریان ما را می‌خوانید.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user-tie text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">محمد رضایی</h4>
+                            <p class="text-gray-500 text-sm">مدیر عامل شرکت صنعتی آذر</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 text-justify">با بیش از ۵ سال همکاری با تیم آئین ارقام تیام، توانسته‌ایم به بهترین شکل ممکن امور مالی و مالیاتی شرکت را مدیریت کنیم. تخصص و تعهد این تیم واقعاً قابل تقدیر است.</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user-tie text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">فاطمه محمدی</h4>
+                            <p class="text-gray-500 text-sm">مدیر مالی شرکت بازرگانی پویا</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 text-justify">دوره‌های آموزشی آئین ارقام تیام به‌قدری کاربردی و عملی بود که بلافاصله پس از پایان دوره توانستم دانش کسب‌شده را در محیط کار پیاده‌سازی کنم. سپاسگزارم.</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user-tie text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">علی کریمی</h4>
+                            <p class="text-gray-500 text-sm">صاحب شرکت معدنی کاوه</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star-half-alt text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 text-justify">مشاوره مالیاتی که تیم آئین ارقام تیام به ما ارائه داد، باعث شد بتوانیم به‌صورت قانونی هزینه‌های مالیاتی شرکت را تا ۳۰٪ کاهش دهیم. واقعاً حرفه‌ای هستند.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-bold mb-4">ارتباط با ما</span>
+                <h2 class="text-3xl font-black text-purple-800 mb-4">تماس با ما</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-justify">برای دریافت مشاوره رایگان و اطلاعات بیشتر درباره خدمات ما، با ما در تماس باشید.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                            <i class="fas fa-info-circle text-purple-600 ml-2"></i>
+                            اطلاعات تماس
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">آدرس دفتر</h4>
+                                    <p class="text-gray-600 mt-1">استان فارس، زرین دشت، شهر پیر، بخش ایزدخواست، خیابان امام خمینی، بلوار شهید رخ فیروز</p>
+                                    <a href="#" class="text-purple-600 text-sm mt-2 inline-flex items-center">
+                                        مشاهده روی نقشه
+                                        <i class="fas fa-arrow-left mr-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">شماره‌های تماس</h4>
+                                    <p class="text-gray-600 mt-1">
+                                        <a href="tel:+989164915791" class="hover:text-purple-600">09164915791</a><br>
+                                        <a href="tel:+989173321437" class="hover:text-purple-600">09173321437</a><br>
+                                        <a href="tel:+980753743385" class="hover:text-purple-600">0753743385</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">ایمیل</h4>
+                                    <p class="text-gray-600 mt-1">
+                                        <a href="mailto:tiyamparmozeh1243@gmail.com" class="hover:text-purple-600">tiyamparmozeh1243@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">ساعات کاری</h4>
+                                    <p class="text-gray-600 mt-1">شنبه تا چهارشنبه: 8:00 تا 16:00<br>پنجشنبه: 8:00 تا 13:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 bg-purple-600 text-white p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-xl font-bold mb-4">عضویت در خبرنامه</h3>
+                        <p class="text-purple-100 mb-4 text-justify">با عضویت در خبرنامه ما، از آخرین تخفیف‌ها، دوره‌های جدید و مقالات تخصصی حسابداری و مالیات مطلع شوید.</p>
+                        <form>
+                            <div class="mb-4">
+                                <input type="email" placeholder="آدرس ایمیل شما" class="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-300 text-gray-800">
+                            </div>
+                            <button type="submit" class="w-full bg-white hover:bg-gray-100 text-purple-800 py-3 rounded-lg font-bold transition duration-300">
+                                عضویت
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                            <i class="fas fa-paper-plane text-purple-600 ml-2"></i>
+                            فرم تماس
+                        </h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2 font-medium">نام و نام خانوادگی</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2 font-medium">ایمیل</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 mb-2 font-medium">شماره تماس</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 mb-2 font-medium">موضوع</label>
+                                <select id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    <option value="">انتخاب کنید</option>
+                                    <option value="accounting">حسابداری</option>
+                                    <option value="tax">مالیات</option>
+                                    <option value="registration">ثبت شرکت</option>
+                                    <option value="training">دوره‌های آموزشی</option>
+                                    <option value="other">سایر</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 mb-2 font-medium">پیام شما</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-bold transition duration-300 transform hover:scale-105">
+                                ارسال پیام
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full bg-gray-200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.789012345678!2d51.12345678901234!3d29.98765432109876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDU5JzE1LjYiTiA1McKwMDcnMjYuOSJF!5e0!3m2!1sen!2sir!4v1234567890123!5m2!1sen!2sir" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="hexagon bg-white w-10 h-10 flex items-center justify-center mr-2">
+                            <i class="fas fa-calculator text-purple-600"></i>
+                        </div>
+                        <span class="text-xl font-black">آئین ارقام تیام</span>
+                    </div>
+                    <p class="text-gray-400 text-justify mt-4">شرکت حسابداری و مالیاتی آئین ارقام تیام با بیش از سه دهه تجربه، ارائه‌دهنده خدمات تخصصی در زمینه حسابداری، مالیات و مشاوره مالی است.</p>
+                    <div class="flex space-x-4 space-x-reverse mt-6">
+                        <a href="#" class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-purple-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">لینک‌های سریع</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-left text-xs ml-2"></i> خانه
+                        </a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-left text-xs ml-2"></i> خدمات
+                        </a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-left text-xs ml-2"></i> درباره ما
+                        </a></li>
+                        <li><a href="#training" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-left text-xs ml-2"></i> دوره‌ها
+                        </a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-left text-xs ml-2"></i> تماس
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">خدمات ما</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-left text-xs ml-2"></i> حسابداری و مالیاتی
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-left text-xs ml-2"></i> مشاوره مالیاتی
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-left text-xs ml-2"></i> ثبت شرکت
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-left text-xs ml-2"></i> صدور مدارک
+                        </a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition flex items-center">
+                            <i class="fas fa-chevron-left text-xs ml-2"></i> آموزش تخصصی
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">اطلاعات تماس</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-purple-400 mt-1 ml-2"></i>
+                            <span class="text-gray-400">استان فارس، زرین دشت، شهر پیر، بخش ایزدخواست، خیابان امام خمینی، بلوار شهید رخ فیروز</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-purple-400 ml-2"></i>
+                            <a href="tel:+989164915791" class="text-gray-400 hover:text-white">09164915791</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-purple-400 ml-2"></i>
+                            <a href="mailto:tiyamparmozeh1243@gmail.com" class="text-gray-400 hover:text-white">tiyamparmozeh1243@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-center md:text-right">© 2023 شرکت حسابداری و مالیاتی آئین ارقام تیام. تمام حقوق محفوظ است.</p>
+                <div class="flex items-center mt-4 md:mt-0">
+                    <img src="https://via.placeholder.com/100x40?text=Enamad" alt="نماد الکترونیکی" class="h-10 ml-4">
+                    <img src="https://via.placeholder.com/100x40?text=Samandehi" alt="نماد ساماندهی" class="h-10">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-8 left-8 z-50">
+        <a href="https://wa.me/989164915791" class="floating-btn bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+    
+    <div class="fixed bottom-8 right-8 z-50">
+        <a href="#contact" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-bold flex items-center shadow-xl transition">
+            <i class="fas fa-phone-alt ml-2"></i>
+            تماس فوری
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Create particles
+        const particlesContainer = document.getElementById('particles-js');
+        const particleCount = 30;
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            // Random size between 2px and 5px
+            const size = Math.random() * 3 + 2;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            
+            // Random position
+            particle.style.left = `${Math.random() * 100}%`;
+            
+            // Random animation duration between 10s and 20s
+            const duration = Math.random() * 10 + 10;
+            particle.style.animationDuration = `${duration}s`;
+            
+            // Random delay
+            particle.style.animationDelay = `${Math.random() * 5}s`;
+            
+            particlesContainer.appendChild(particle);
+        }
+        
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        function animateCounters() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+        
+        // Start counter animation when stats section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        const statsSection = document.querySelector('.bg-purple-900');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    </script>
+</body>
+</html>
